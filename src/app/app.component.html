@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-10 text-black text-center">
+      <h1 class="font-weight-light">GoodReads Web APP</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="card col-md-4">
+      <div class="card-body">
+        <h5 class="card-title">Search Book</h5>
+        <div class="form-group">
+          <input type="text" class="form-control" #searchTerm placeholder="Book Title" />
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="searchBooks(searchTerm.value)">Search</button>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <reusable-table [data]="books" [columns]="columnsToDisplay"></reusable-table>
+    </div>
+  </div>
+</div>
